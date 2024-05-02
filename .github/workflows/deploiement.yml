@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 20
       - name: load linter
-        run: npm lint
+        run: npm run lint
 
   test:
     needs: lint
