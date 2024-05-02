@@ -1,0 +1,12 @@
+name : contexte issues  
+on:
+  issues:
+    types: [opened, edited, deleted]
+jobs:
+   print:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Get code
+         uses: actions/checkout@v3
+       - name: Print issue
+         run: echo ${{ github.event.issue.title }}     
